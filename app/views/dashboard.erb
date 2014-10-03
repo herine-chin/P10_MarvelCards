@@ -1,0 +1,59 @@
+
+<% if @error_message %>
+  <p><%= @error_message %></p>
+<% else %>
+
+
+<div class="wrapper">
+  <div class="card_headers">
+    <h2 class="collection_header">Collection</h1>
+    <h2 class="new_header">New Cards</h1>
+  </div>
+
+  <div class="card_side">
+    <div class="your_cards">
+      <% unless @cards.empty? %>
+        <% @cards.each do |card| %>
+        <div class="white_cards" id="<%= card.id %>">
+            <h4><%= card.name %></h4>
+          <div class="your_card_info">
+            <img class="card_image" src="<%= card.image %>">
+          </div>
+
+          <form action="/send/<%= card.id %>" method="post">
+            <button class="send_button" id="/send/<%= card.id %>" type="button">Send to</button>
+            <input type="text" name="email" placeholder="Email">
+          </form>
+
+          <button class="delete_button" id="/delete/<%= card.id %>" type="button">Delete this card</button>
+
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+
+
+    <div class="new_cards">
+      <% unless @new_cards.empty? %>
+        <% @new_cards.each do |card| %>
+        <div class="black_cards" id="<%= card.id %>">
+            <h4><%= card.name %></h4>
+          <div class="new_card_info">
+            <img class="card_image" src="<%= card.image %>">
+          </div>
+
+          <form action="/send/<%= card.id %>" method="post">
+          <button class="accept_button" id="/accept/<%= card.id %>" type="button">Accept</button>
+          <input class="hide" type="text" name="email" placeholder="Email">
+          </form>
+
+          <button class="delete_button" id="/delete/<%= card.id %>" type="button">Delete this card</button>
+
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<% end %> <!-- for the error message if block -->

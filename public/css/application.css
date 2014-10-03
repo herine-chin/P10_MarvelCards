@@ -1,0 +1,203 @@
+/*GENERAL*/
+body {
+  font-family: "TradeGothicBold", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/marvel_background.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.nav_bar {
+  margin: 0;
+  height: 3em;
+  padding-top: 1em;
+  border-bottom: .5em solid  #FF0000;
+  background-color: #262626;
+  list-style-type: none;
+  width: 97%;
+  text-align: right;
+}
+
+.nav_bar_element {
+  font-size: 1.5em;
+  color: white;
+  display: inline-block;
+}
+
+
+.hide {
+  display: none;
+}
+
+.greeting {
+  padding-right: 1%;
+}
+
+.signout_button {
+  background-color: black;
+  padding-right: 0;
+  margin-right: 2%;
+  padding: 0.5%;
+  border-radius: .35em;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    border: .1em solid black;
+}
+
+button {
+  border-radius: .5em;
+}
+
+input {
+  margin-bottom: 2%;
+  border-radius: .5em;
+  width: 8em;
+}
+
+/*SIGIN ERB*/
+label {
+  font-weight: bold;
+}
+
+h1{
+  color: white;
+  position: absolute;
+  left: 5em;
+}
+
+.signup_area {
+  position: absolute;
+  right: 0;
+  width: 15em;
+  text-align: right;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+.signup_button {
+
+}
+
+.member_button_class {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  margin-right: 5%;
+}
+
+.signin_form_area {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 45%;
+  width: 15em;
+  margin-right: 5%;
+}
+
+
+/*DASHBOARD ERB*/
+.wrapper {
+  background-color: white;
+  height: 100%
+}
+
+.red_logo {
+  height: 4em;
+  position: absolute;
+}
+
+.card_headers {
+  color: #330000;
+  background-image: url('/images/marvel_background.jpg');
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 10px 5px #888888;
+}
+
+.collection_header {
+  width: 50%;
+  display: inline-block;
+  text-align: center
+}
+
+.new_header {
+  width: 49%;
+  display: inline-block;
+  text-align: center
+}
+
+.card_side {
+  display: block;
+}
+
+.your_cards {
+  background: linear-gradient(black, white); /* Standard syntax */
+  text-align: center;
+  vertical-align: top;
+  width: 50%;
+  display: inline-block;
+  height: 100%;
+}
+
+.new_cards {
+  text-align: center;
+  vertical-align: top;
+  width: 49%;
+  display: inline-block;
+}
+
+.black_cards {
+  color:  #990000;
+  display: inline-block;
+  margin-right: 2%
+}
+
+.white_cards {
+  color:  #990000;
+  display: inline-block;
+  margin-right: 2%
+}
+
+.your_card_info {
+  width: 15em;
+  height: 23em;
+  margin: 0 auto;
+  border: .75em solid #330000;
+  border-radius: 5%;
+  overflow:hidden;
+  box-shadow: 10px 10px 5px   #660000;
+  margin-bottom: 5%;
+}
+
+.new_card_info {
+  width: 15em;
+  height: 23em;
+  margin: 0 auto;
+  border: .75em solid #330000;
+  border-radius: 5%;
+  overflow:hidden;
+  box-shadow: 10px 10px 5px   #660000;
+  margin-bottom: 5%;
+}
+
+h4 {
+  margin-bottom: 1%;
+}
+
+.your_card_info img {
+  height: 100%;
+  margin: 0 -25%;
+  }
+
+.new_card_info img {
+height: 100%;
+margin: 0 -25%;
+}
+
+.delete_button {
+  margin-top: 1%
+}
