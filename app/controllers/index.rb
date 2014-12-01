@@ -46,7 +46,7 @@ end
 
 get '/dashboard/:user_id' do
 
-  @user = User.find(params[:user_id])
+  @user = User.find_by_id(params[:user_id])
 
   if session[:user_id] == params[:user_id].to_i
     @cards = Card.where(user_id: params[:user_id], accepted: true)
@@ -68,18 +68,18 @@ get '/signout' do
 end
 
 get '/accept/:card_id' do
-  @card = Card.find(params[:card_id])
+  @card = Card.find_by_id(params[:card_id])
   @card.accepted = true
   @card.save
 end
 
 get '/delete/:card_id' do
-  Card.find(params[:card_id]).delete
+  Card.find_by_id(params[:card_id]).delete
 end
 
 post '/send/:card_id' do
   p params
-  @card = Card.find(params[:card_id])
+  @card = Card.find_by_id(params[:card_id])
   @new_user = User.find_by_email(params[:email])
   @card.user_id = @new_user.id
   @card.accepted = false
@@ -90,7 +90,7 @@ end
 # STRETCH STUFF?????
 
 # get '/profile/:user_id' do
-#   @user = User.find(session[:user_id])
+#   @user = User.find_by_id(session[:user_id])
 #   erb :profile
 # end
 #
